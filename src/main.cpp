@@ -26,7 +26,7 @@ int main()
         actor.update();
 
         BeginDrawing();
-        ClearBackground(RAYWHITE);
+        ClearBackground(DARKGREEN);
 
         target.render();
         actor.render();

@@ -12,3 +12,13 @@ fighting phase:
 - invasions result in either resource gain/loss population gain/loss or both
 
 see how large you can make it, population count should be win condition
+
+how to build the civilization?
+
+composed of building and land:
+farmers occupy farming tiles
+miners enter caves
+guards surround the civilization
+
+enemy invasions:
+there is a small chance that a enemy civilization will come to invade your civilization, if you have guards out, the civ will be notified, commencing battle.
