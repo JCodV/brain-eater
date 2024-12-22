@@ -1,3 +1,4 @@
+#pragma once
 #include "raylib.h"
 
 const float default_width = 50.0f;
@@ -16,5 +17,6 @@ public:
 
     virtual void update();
     virtual void render();
+
 private:
 };
