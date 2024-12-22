@@ -1,3 +1,5 @@
+#include <memory>
+
 #include "raylib.h"
 #include "entity.h"
 
@@ -12,11 +14,20 @@ class Actor : public Entity
 {
 public:
     State state;
-    bool is_enemy;
+    Vector2 velocity;
 
-    Actor(State state, bool is_enemy);
+    Actor();
+    Actor(Vector2 position, Vector2 velocity, std::shared_ptr<Entity> target, float max_target_distance);
+    Actor(Vector2 position, State state, Vector2 velocity, std::shared_ptr<Entity> target, float max_target_distance);
 
     void update();
     void render();
+
+    void changeState(State state);
+    void changeTarget(std::shared_ptr<Entity> new_target);
 private:
+    std::shared_ptr<Entity> target;
+    float max_target_distance;
+
+    void moveTowardsTarget();
 };

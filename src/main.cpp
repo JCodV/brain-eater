@@ -1,32 +1,30 @@
 #include <vector>
 #include <iostream>
-#include "door.h"
+#include "raylib.h"
+#include "actor.h"
 
-const float screen_width = 800;
-const float screen_height = 450;
+const int screen_width = 800;
+const int screen_height = 450;
 
 int main()
 {
-    InitWindow((int)screen_width, (int)screen_height, "Doors");
+    InitWindow(screen_width, screen_height, "Civilization");
     SetTargetFPS(60);
-    
-    std::vector<Door> doors;
-    doors.push_back(Door(DoorPosition::MIDDLE, BROWN, 0));
-    doors.push_back(Door(DoorPosition::LEFT, BROWN, 0));
-    doors.push_back(Door(DoorPosition::RIGHT, BROWN, 0));
 
+    Vector2 velocity {50.0f, 50.0f};
+    Actor target();
+    std::shared_ptr<Entity> target_ptr;
+    Actor actor();
     while (!WindowShouldClose())
     {
-        for (Door d : doors)
-            d.update();
+        actor.update();
+
         BeginDrawing();
-            ClearBackground(RAYWHITE);
-            
-            for (Door d : doors)
-                d.render();
+        ClearBackground(RAYWHITE);
+
+        actor.render();
         EndDrawing();
     }
     CloseWindow();
     return 0;
 }
-

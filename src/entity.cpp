@@ -1,7 +1,12 @@
 #include "entity.h"
 #include "raymath.h"
 Entity::Entity()
-    : position(Vector2Zeros), width(50.0), height(50.0)
+    : position(Vector2Zeros), width(default_width), height(default_height)
+{
+}
+
+Entity::Entity(Vector2 position)
+    : position(position), width(default_width), height(default_height)
 {
 }
 

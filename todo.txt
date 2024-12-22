@@ -1,0 +1,14 @@
+game inspired by a coolmathgame i played.
+this game runs in 2 phases:
+- prep phase
+- fighting phase
+
+prep phase:
+- farm for food and other resources
+- more food allows for faster population growth
+
+fighting phase:
+- either invade, be pacifist or potentially get invaded
+- invasions result in either resource gain/loss population gain/loss or both
+
+see how large you can make it, population count should be win condition

@@ -1,2 +1,2 @@
-add_executable(${PROJECT_NAME} main.cpp entity.cpp
+add_executable(${PROJECT_NAME} main.cpp entity.cpp actor.cpp
 )
