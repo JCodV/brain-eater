@@ -1,3 +1,4 @@
+#include <vector>
 #include <iostream>
 #include "door.h"
 
@@ -8,15 +9,21 @@ int main()
 {
     InitWindow((int)screen_width, (int)screen_height, "Doors");
     SetTargetFPS(60);
-
-    Door door(DoorPosition::MIDDLE, BROWN, 0);
+    
+    std::vector<Door> doors;
+    doors.push_back(Door(DoorPosition::MIDDLE, BROWN, 0));
+    doors.push_back(Door(DoorPosition::LEFT, BROWN, 0));
+    doors.push_back(Door(DoorPosition::RIGHT, BROWN, 0));
 
     while (!WindowShouldClose())
     {
-        door.update();
+        for (Door d : doors)
+            d.update();
         BeginDrawing();
             ClearBackground(RAYWHITE);
-            door.render();
+            
+            for (Door d : doors)
+                d.render();
         EndDrawing();
     }
     CloseWindow();
