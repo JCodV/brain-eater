@@ -26,23 +26,35 @@ void CivilizationMap::render()
         for (int j = 0; j < map[i].size(); j++)
         {
             Color color;
+            std::cout << i << ' ' << j << ' ';
             switch (map[i][j].type)
             {
                 case TileType::UNDEFINED:
                     color = DARKGRAY;
+                    std::cout << "darkgray";
+                    break;
                 case TileType::GRASS:
                     color = DARKGREEN;
+                    std::cout << "darkgreen";
+                    break;
                 case TileType::WATER:
                     color = BLUE;
+                    std::cout << "blue";
+                    break;
                 case TileType::SOIL:
                     color = BROWN;
+                    std::cout << "brown";
+                    break;
                 case TileType::CAVE_ENTRANCE:
                     color = BLACK;
+                    std::cout << "black";
+                    break;
                 case TileType::CIV_WALL:
                     color = ORANGE;
+                    std::cout << "orange";
+                    break;
 
             }
-                std::cout << i << ' ' << j << ": ";
                 DrawRectangle(i*tile_sprite_width, j*tile_sprite_width, tile_sprite_width, tile_sprite_height, color);
         }
     }

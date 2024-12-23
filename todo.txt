@@ -22,3 +22,9 @@ guards surround the civilization
 
 enemy invasions:
 there is a small chance that a enemy civilization will come to invade your civilization, if you have guards out, the civ will be notified, commencing battle.
+
+
+TODO:
+
+[ ] fix map[i][j] only rendering darkgray
+    - maybe type is not being set correctly in read_map_data()
