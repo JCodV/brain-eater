@@ -2,13 +2,14 @@
 #include "entity.h"
 
 const int tile_sprite_width = 16;
-const int tile_sprite_length = 16;
+const int tile_sprite_height = 16;
 
-class LandTile : public Entity
+class Tile : public Entity
 {
 public:
     enum class TileType
     {
+        UNDEFINED,
         GRASS,
         WATER,
         SOIL,
@@ -18,6 +19,10 @@ public:
 
     TileType type;
     bool is_occupied;
+    bool is_destructable;
+
+    Tile();
+    Tile(TileType type);
 
 private:
 };

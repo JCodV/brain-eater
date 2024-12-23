@@ -16,7 +16,6 @@ int main()
     SetTargetFPS(60);
 
     Texture2D starter_map = LoadTexture("assets/starter_map.png");
-    // Texture2D starter_map = LoadTexture("C:/Projects/Cpp/civilization-sim/assets/starter_map.png");
 
     std::cout << GetWorkingDirectory() << '\n';
     Vector2 target_position{screen_width/2.0, screen_height/2.0};
