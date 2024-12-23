@@ -1,21 +1,23 @@
+#pragma once
 #include "raylib.h"
 #include "entity.h"
 
 const int tile_sprite_width = 16;
 const int tile_sprite_height = 16;
 
+enum class TileType
+{
+    UNDEFINED,
+    GRASS,
+    WATER,
+    SOIL,
+    CAVE_ENTRANCE,
+    CIV_WALL
+};
+
 class Tile : public Entity
 {
 public:
-    enum class TileType
-    {
-        UNDEFINED,
-        GRASS,
-        WATER,
-        SOIL,
-        CAVE_ENTRANCE,
-        CIV_WALL
-    };
 
     TileType type;
     bool is_occupied;
