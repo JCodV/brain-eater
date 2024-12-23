@@ -18,7 +18,7 @@ public:
     float speed;
 
     Actor();
-    Actor(Vector2 position, Vector2 velocity, float speed, std::shared_ptr<Entity> target, float max_target_distance);
+    Actor(Vector2 position, float speed, std::shared_ptr<Entity> target, float max_target_distance);
     Actor(Vector2 position, State state, Vector2 velocity, float speed, std::shared_ptr<Entity> target, float max_target_distance);
 
     void update();

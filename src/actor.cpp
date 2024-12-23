@@ -9,8 +9,8 @@ Actor::Actor()
 {
 }
 
-Actor::Actor(Vector2 position, Vector2 velocity, float speed, std::shared_ptr<Entity> target, float max_target_distance)
-    : Entity(position), velocity(velocity), speed(speed), target(target), max_target_distance(max_target_distance)
+Actor::Actor(Vector2 position, float speed, std::shared_ptr<Entity> target, float max_target_distance)
+    : Entity(position), velocity(Vector2Zeros), speed(speed), target(target), max_target_distance(max_target_distance)
 {
 }
 

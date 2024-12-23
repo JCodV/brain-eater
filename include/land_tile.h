@@ -1,6 +1,9 @@
 #include "raylib.h"
 #include "entity.h"
 
+const int tile_sprite_width = 16;
+const int tile_sprite_length = 16;
+
 class LandTile : public Entity
 {
 public:

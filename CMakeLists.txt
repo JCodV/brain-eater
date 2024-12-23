@@ -24,3 +24,6 @@ endif()
 
 # link libraries
 target_link_libraries(${PROJECT_NAME} PRIVATE raylib)
+
+# copy assets folder to where exe is found
+file(COPY assets DESTINATION ${CMAKE_BINARY_DIR})

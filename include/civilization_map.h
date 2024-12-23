@@ -6,7 +6,6 @@ const int max_height = 300;
 class CivilizationMap
 {
 public:
-
-
+    
 private:
 };
