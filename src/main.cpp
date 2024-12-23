@@ -16,8 +16,6 @@ int main()
     InitWindow(screen_width, screen_height, "Civilization");
     SetTargetFPS(60);
 
-    // Texture2D starter_map = LoadTexture("assets/starter_map.png");
-
     std::cout << GetWorkingDirectory() << '\n';
     Vector2 target_position{screen_width/2.0, screen_height/2.0};
     Entity target(target_position);
