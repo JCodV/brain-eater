@@ -42,7 +42,10 @@ void Actor::update()
     //     moveTowardsTarget();
     // }
 
-    moveTowardsTarget();
+    if (Vector2Distance(position, target->position) > 10.0f)
+    {
+        moveTowardsTarget();
+    }
 }
 
 void Actor::render()

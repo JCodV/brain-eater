@@ -4,16 +4,11 @@
 #include "raymath.h"
 #include "actor.h"
 #include "civilization_map.h"
-
-const int screen_width = 320;
-const int screen_height = 160;
-
-const int sprite_scale_x = 20;
-const int sprite_scale_y = 10;
+#include "game.h"
 
 int main()
 {
-    InitWindow(screen_width, screen_height, "Civilization");
+    InitWindow(target_screen_width, target_screen_height, "Civilization");
     SetTargetFPS(60);
 
     std::cout << GetWorkingDirectory() << '\n';
